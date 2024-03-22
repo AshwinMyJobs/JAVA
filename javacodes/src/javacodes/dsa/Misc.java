@@ -18,44 +18,38 @@ public class Misc {
 //		
 //		int x = Integer.parseInt("10000000", 2);
 //		System.out.println(x);
-		
-		
+
 		checkBit(10, 2);
 	}
-	
-	
+
 	public static void checkBit(int x, int pos) {
-		
+
+
 		System.out.println(Integer.toBinaryString(x));
 		System.out.println();
 		System.out.println(Integer.toBinaryString(10));
-		System.out.println("  "+Integer.toBinaryString(1<<1));
+		System.out.println("  " + Integer.toBinaryString(1 << 1));
 		System.out.println("======================================");
-		System.out.println("  "+Integer.toBinaryString(10&1<<1));
-		
+		System.out.println("  " + Integer.toBinaryString(10 & 1 << 1));
+
 		System.out.println("======================================");
-		
-		System.out.println();System.out.println();System.out.println();
-		
+
+		System.out.println();
+		System.out.println();
+		System.out.println();
+
 		System.out.println(Integer.toBinaryString(8));
 		System.out.println();
 		System.out.println(Integer.toBinaryString(8));
-		System.out.println("  "+Integer.toBinaryString(1<<1));
+		System.out.println("  " + Integer.toBinaryString(1 << 1));
 		System.out.println("======================================");
-		System.out.println("  "+Integer.toBinaryString(8&1<<1));
-		
+		System.out.println("  " + Integer.toBinaryString(8 & 1 << 1));
+
 		System.out.println("======================================");
-		
-		
-		
-		
-		
-		
-		
+
 //		int z = x + 1<<1;
 //		System.out.println(Integer.toString(z, 2));
 //		System.out.println(z);
-		
+
 	}
 }
-
