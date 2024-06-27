@@ -36,4 +36,54 @@ public class PrintSprialMatrix {
 		}
 	}
 
+	
+	
+	public static void solve2(int[][] inputArray) {
+		
+		int rLength = inputArray.length;
+		int cLemgth = inputArray[0].length;
+		
+		int rStart = 0 ,cStart = 0;
+		int rMin = 0, cMin = 0;
+		
+		int count = 0;
+		int index = 1;
+		
+		while(count < inputArray.length * inputArray[0].length) {
+			
+			while(cMin<cLemgth-index) {
+				System.out.print(inputArray[rMin][cMin]+",");
+				cMin++;
+				count++;
+			}
+			
+			while(rMin<rLength-index) {
+				System.out.print(inputArray[rMin][cMin]+",");
+				rMin++;
+				count++;
+			}
+			
+			while(cMin>cStart) {
+				System.out.print(inputArray[rMin][cMin]+",");
+				cMin--;
+				count++;
+			}
+			
+			
+			while(rMin>rStart) {
+				System.out.print(inputArray[rMin][cMin]+",");
+				rMin--;
+				count++;
+			}
+			
+			rStart++;
+			cStart++;
+			
+			rMin = rStart;
+			cMin = cStart;
+			
+			index++;
+		}
+
+	}
 }
