@@ -13,6 +13,7 @@ public class ArithmeticProgression {
 		inputList.add(2);
 		inputList.add(4);
 		inputList.add(1);
+		//inputList.add(3);
 		System.out.println(solve(inputList));
 	}
 

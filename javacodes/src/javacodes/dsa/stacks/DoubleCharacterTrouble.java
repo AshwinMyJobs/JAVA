@@ -9,12 +9,14 @@ public class DoubleCharacterTrouble {
 
 	public static void main(String[] args) {
 
-		// String A = "abccbc";
+		String A = "abccbc";
 		//String A = "aaa";
-		String A = "ababaz";
-		System.out.println(A);
-
-		System.out.println(solve(A));
+		//String A = "ababaz";
+		
+//		System.out.println(A);
+//		System.out.println(solve(A));
+		
+		solveDoubleCharecterProblem(A);
 
 	}
 
@@ -54,4 +56,26 @@ public class DoubleCharacterTrouble {
 		System.out.println(new String(resultString));
 		return resultString;
 	}
+
+	private static void solveDoubleCharecterProblem(String A) {
+		
+		Stack<String> stack = new Stack<>();
+		
+		for(int i=0; i<A.length(); i++) {
+			if(stack.isEmpty()) {
+				stack.push(String.valueOf(A.charAt(i)));
+			}else {
+				if(String.valueOf(A.charAt(i)).equals(stack.peek())){
+					stack.pop();
+				}else {
+					stack.add(String.valueOf(A.charAt(i)));
+				}
+			}
+		}
+		
+		System.out.println(stack.toString());
+		
+	}
+
+
 }

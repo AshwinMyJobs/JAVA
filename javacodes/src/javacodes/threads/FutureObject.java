@@ -2,6 +2,8 @@ package javacodes.threads;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -34,6 +36,25 @@ public class FutureObject {
 		System.out.println(futureList2);
 
 		executorService.shutdown();
+		
+		IdentityHashMap identityHashMap = new IdentityHashMap();
+		
+		identityHashMap.put("string1", "string1");
+		//identityHashMap.put("string1", "string1");
+		identityHashMap.put(new String("string1"), "string1");
+		
+		System.out.println(identityHashMap.size());
+		
+		HashMap<String, String> hashMap = new HashMap<>();
+		
+		hashMap.put("string1", "string1");
+		//identityHashMap.put("string1", "string1");
+		hashMap.put(new String("string1"), "string1");
+		
+		System.out.println(hashMap.size());
+		
+		System.out.println(identityHashMap.values());
+		System.out.println(hashMap.values());
 	}
 
 	
