@@ -24,4 +24,21 @@ public class SmallestNumber {
 		return Integer.valueOf(numberString);
 	}
 	
+	//Practice
+	private static int smallestNumberPractice1(int A) {
+		
+		String numberString = "";
+		
+		for(int i=9; i>=2; i--) {
+			while(A%i==0) {
+				A = A/i;
+				numberString = i + numberString;
+			}
+		}
+		
+		if(A!=1) return -1;
+		
+		return Integer.parseInt(numberString);
+	}
+	
 }

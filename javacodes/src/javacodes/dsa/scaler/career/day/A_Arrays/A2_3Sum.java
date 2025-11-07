@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * 
- * @author 5600G Given integer array and target find all the tirplets such that
+ * @author 5600G 
+ * Given integer array and target find all the tirplets such that
  *         i + j + k = target Note : Solution must contain unique triplets
  */
 public class A2_3Sum {
